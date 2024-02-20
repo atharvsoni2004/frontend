@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- content delivery network -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Display information about a car -->
+                <h2>JavaScript Objects</h2>
+                <p id="car"></p>
+                <h2>person Information</h2>
+                <p id="person"></p>
+                <h2>Use of Key word</h2>
+                <p id="demo"></p>
+                <h2>Second time use of this keyword</h2>
+                <p id="laptop"></p>
+                <h2>Jay Mataji</h2>
+                <p id="bhavati"></p>
+                <script>
+                    // Creating an object named 'car'
+                    let car = { company: "Hundai", model: "Magna", Price: "2lackh" };
+                    document.getElementById("car").innerHTML = "Information of car is " + car.company + " " +
+                        car.model + " " + car.Price;
+
+                    // Creating an object named 'male'
+                    let male = { gender: "Male", color: "White", height: "5.7" };
+                    document.getElementById("person").innerHTML = "Information of this Person " +
+                        male.gender + " " + male.color + " " + male.height;
+
+                         let phone= 
+                                     {
+                                        companyname:"Samsung",
+                                        Model:"J7PRO",
+                                        owner:"Atharv Soni",
+                                        fullName : function ()
+                        {
+                            return "Name of company: " + this.companyname + " Model of company: " + this.Model;
+                        }
+                                 
+                                     };
+
+                         let device=
+                         {
+                            company:"lenovo",
+                            model:"ideapad",
+                            stage:"gaming 3",
+                            computer: function()
+                            {
+                                return "Details of Company " + this.company + " Laptop model is " +this.model;
+                            }
+                        } 
+
+                        let child=
+                        {
+                            age:"6 Years",
+                            name:"Bhavati",
+                            girl:function()
+                            {
+                                return "Bhavati Age: "  +this.age+ " my sister name is  " +this.name;
+                            }
+                        }
+                    // Displaying the result of calling the 'fullName' function
+                    document.getElementById("demo").innerHTML = phone.fullName();
+                    document.getElementById("laptop").innerHTML=device.computer();
+                    document.getElementById("bhavati").innerHTML=child.girl();
+                  
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

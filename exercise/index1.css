@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Merriweather&display=swap');
+*
+{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-family: 'Merriweather', serif;
+}
+body 
+{
+    background-color: #F9E795;
+    color:#F96167;
+}
+#menu 
+{
+    background-color: #F96167;
+    color:#F9E795;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    box-shadow: 5px 5px 5px gray;
+    position: sticky;
+    top:0px;
+    left:0px;
+}
+#menu>h1 
+{
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Lora', serif;
+}
+#menu>ul 
+{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+}
+#menu>ul>li:hover
+{
+    transform: scale(1.1);
+    animation: rotate 1s linear;
+}
+
+@keyframes rotate 
+    {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+/* a:link psudo class applies to unvisited link */
+#menu>ul>li>a:link
+{
+    background-color: white;
+    color:#F96167;
+    padding:5px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 5px 5px 5px gray;
+    font-family: 'Lora', serif;
+}
+/* a:visited psudo class applies to visited link */
+#menu>ul>li>a:visited
+{
+    color:blue;
+}
+#menu>ul>li>a:hover
+{
+    background-color: #F9E795;
+    color:#F96167;
+}
+#menu>ul>li>a:active
+{
+    background-color:black;
+    color:white;
+}
+.last-child 
+{
+    margin-right: 20px;
+}
+#content 
+{
+    margin:auto;
+    margin-top: 50px;
+    width:80%;
+}
+#content>h1 
+{
+    border-bottom: 2px solid #F96167;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+}
+#content>p 
+{
+    margin-bottom: 10px;
+    font-size: large;
+    text-align: justify;
+    line-height: 125%;
+    text-indent: 50px;
+}
+#footer 
+{
+    background-color: #F96167;
+    color:#F9E795;
+    text-align: center;
+    padding:20px;
+    position: sticky;
+    left:0px;
+    bottom: 0px;
+}

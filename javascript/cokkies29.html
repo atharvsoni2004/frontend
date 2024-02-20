@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create cookies example</h1>
+
+
+    <!-- external javascript -->
+    <script src="cookies.js"></script> 
+
+    <script>
+         //create 3 cookies 
+         var name = prompt("enter name");
+         var password = prompt("enter password");
+         var age = prompt("enter age");
+
+         //create cookies 
+         setCookie("fullname",name,24);
+         setCookie("password",password,120);
+         setCookie("age",age,-2);
+    </script>
+
+</body>
+</html>

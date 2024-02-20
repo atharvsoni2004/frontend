@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+        <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- content delivery network -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+           <h1 class="text-center">Object binding</h1>
+           <p id="demo" class="text-center"></p>
+           <h1 class="text-center">Object binding 2</h1>
+           <p  id="track"  class="text-center"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <script>
+           const person={
+            name:"Atharv Soni",
+            height:"5.7ft",
+            weight:"60kg",
+            detail : function()
+           {
+               return  this.name+ " "+ this.height;
+            }  
+           }
+           const student={
+            name:"Ankit Patel",
+            height:"6ft"
+           }
+           const detail= person.detail.bind(student);
+           document.getElementById("demo").innerHTML=detail();
+
+           const school=
+           {
+                fistname:"Atharv",
+                lastname:"Soni",
+                fullname:function()
+                {
+                   let x=document.getElementById("track");
+                   x.innerHTML=this.fistname+ " " +this.lastname;
+                }
+
+           }
+           school.fullname();
+        </script>
+</body>
+</html>
